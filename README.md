@@ -1,24 +1,22 @@
-This is a simple JavaScript function which allows you to get and set CSS styles on DOM elements with ease.
+This is a simple JavaScript function which allows you to get and set CSS properties on DOM elements with ease.
 
-# Step 1 #
+``` bash
+npm install stylerjs
+```
 
-### Install ###
-`npm install --save-dev stylerjs`
+# Usage
 
-# Step 2 #
+``` javascript
+var styler = require('stylerjs')
+```
 
-### Import to your project (ES5) ###
+Now that stylerjs has been imported in to your project you're able to start getting and setting CSS properties to your DOM elements.
 
-`var styler = require('stylerjs');`
+## Get Styles ##
+``` javascript
+var styles = styler('.class-name').get(['height', 'width']);
+```
 
-### Import to your project (ES6) ###
-
-`import styler from 'stylerjs'`
-
-# Step 3 #
-
-### Get Styles ###
-`var styles = styler('.class-name').get(['height', 'width']);`
-
-### Set Styles ###
-`styler('.class-name').set({ 'height': '50px', 'width': '50px' });`
+## Set Styles ##
+``` javascript
+styler('.class-name').set({ 'height': '50px', 'width': '50px' });```
