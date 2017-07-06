@@ -1,5 +1,5 @@
 {
-  "name": "spinner",
+  "name": "stylerjs",
   "version": "1.0.0",
   "description": "A simple class allowing you to implement and use your own loading and percentage spinners/loaders.",
   "main": "src/index.js",
