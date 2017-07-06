@@ -5,7 +5,9 @@
   "main": "src/index.js",
     "scripts": {
         "compile": "babel --presets es2015,stage-0 -d lib/ src/",
-        "prepublish": "npm run compile"
+        "prepublish": "npm run compile",
+        "test": "mocha --compilers js:babel-register",
+        "test:watch": "mocha --compilers js:babel-register --watch"
     },
   "repository": {
     "type": "git",
