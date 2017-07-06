@@ -1,6 +1,6 @@
 {
   "name": "stylerjs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This is a simple JavaScript function which allows you to get and set CSS styles on DOM elements with ease.",
   "main": "lib/index.js",
   "scripts": {
