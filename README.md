@@ -19,4 +19,4 @@ var styles = styler('.class-name').get(['height', 'width']);
 
 ## Set Styles ##
 ``` javascript
-styler('.class-name').set({ 'height': '50px', 'width': '50px' });```
+styler('.class-name').set({ 'height': '50px', 'width': '50px' });
