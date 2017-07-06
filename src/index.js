@@ -1,4 +1,4 @@
-export function styler(element) {
+export default function styler(element) {
     function getElement() {
         return element instanceof HTMLElement ? element : document.querySelector(element);
     }
