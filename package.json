@@ -2,7 +2,7 @@
   "name": "stylerjs",
   "version": "1.0.0",
   "description": "This is a simple JavaScript function which allows you to get and set CSS styles on DOM elements with ease.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
     "scripts": {
         "compile": "babel --presets es2015,stage-0 -d lib/ src/",
         "prepublish": "npm run compile",
