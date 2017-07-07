@@ -1,6 +1,12 @@
 export default function styler(element) {
-    function getElement() {
-        return element instanceof HTMLElement ? element : document.querySelector(element);
+    function getElements() {
+        if (element instanceof HTMLElement) {
+            return [element];
+        } else if (typeof element === 'string') {
+            return document.querySelectorAll(element)
+        }
+
+        return [];
     }
  
     return {
@@ -9,7 +15,14 @@ export default function styler(element) {
                 throw new Error('Second parameter of this function should be an array');
             }
  
-            let elem = getElement();
+            let elems = getElements();
+            
+            if (elems.length === 0) {
+                return false;
+            }
+
+            let elem = elems[0];
+ 
             let obj = {};
  
             if (elem instanceof HTMLElement && styles) {
@@ -23,13 +36,19 @@ export default function styler(element) {
                 throw new Error('Second parameter of this function should be an object');
             }
  
-            let elem = getElement();
- 
-            if (elem instanceof HTMLElement && styles) {
-                for (let i in styles) {
-                    elem.style[i] = styles[i];
-                }
+            let elems = getElements();
+
+            if (elems.length === 0) {
+                return false;
             }
+ 
+            elems.forEach(function(elem) {
+                for (let i in styles) {
+                    if (styles.hasOwnProperty(i)) {
+                        elem.style[i] = styles[i];
+                    }
+                }
+            });
         }
     }
 }
