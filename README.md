@@ -17,6 +17,23 @@ Now that stylerjs has been imported in to your project you're able to start gett
 var styles = styler('.class-name').get(['height', 'width']);
 ```
 
+or you can pass it a node
+
+``` javascript
+var element = document.querySelector('.class-name');
+var styles = styler(element).get(['height', 'width']);
+```
+
 ## Set Styles ##
+
+You can set styles to multiple DOM elements by passing it a class. This will apply all of your specified styles to those elements.
+
 ``` javascript
 styler('.class-name').set({ 'height': '50px', 'width': '50px' });
+```
+
+or you can pass the styler a single node if you wish to do just one.
+
+```javascript
+var element = document.querySelector('.class-name');
+styler(element).set({ 'height': '50px', 'width': '50px' });
