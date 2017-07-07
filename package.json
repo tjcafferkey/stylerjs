@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/tjcafferkey/stylerjs.git"
   },
+  "keywords": [
+    "css",
+    "dom",
+    "javascript"
+  ],
   "author": "Tom Cafferkey",
   "license": "ISC",
   "bugs": {
