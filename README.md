@@ -37,3 +37,4 @@ or you can pass the styler a single node if you wish to do just one.
 ```javascript
 var element = document.querySelector('.class-name');
 styler(element).set({ 'height': '50px', 'width': '50px' });
+```
